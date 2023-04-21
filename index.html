@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home :: Portfolio</title>
+
+    <!--METAS-->
+    <meta name="Description" content="A wonderful portfolio site showcasing skills and projects">
+    <meta name="Keywords" content="skills, projects, contact, about">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--RESET-->
+    <link rel="stylesheet" href="css/reset.css">
+
+
+    <!-- FAVICON -->
+    <link rel="icon" href="favicon.png">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!--   JQUERY -->
+    <script src="jquery-3.1.1.js"></script>
+
+
+    <!-- ACCORDIAN CSS + JS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+
+    <!--  FLEXSLIDER  -->
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+    <script src="js/jquery.flexslider.js"></script>
+    
+     <!--   MASONRY JS -->
+    <script src="js/freewall.js"></script>
+
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+
+    <!--SMOOTH SCROLL-->
+    <script src="js/css-tricks-smooth-scroll.js"></script>
+
+    <!-- SLICKNAV - CSS + JS -->
+    <link rel="stylesheet" href="css/slicknav.css">
+    <script src="js/jquery.slicknav.js"></script>
+
+
+    <!--   FLEXSLIDER MIGRATE AND JQUERY  -->
+    <script src="https://code.jquery.com/jquery-migrate-3.4.1.min.js" integrity="sha256-UnTxHm+zKuDPLfufgEMnKGXDl6fEIjtM+n1Q6lL73ok=" crossorigin="anonymous"></script>
+
+    <!--    PRETTY PHOTO LIGHTBOX  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettyPhoto/3.1.6/css/prettyPhoto.min.css" integrity="sha512-aB3UdGCt+QZdSlPCgDsJBJ+JytRb8oq/cdMEpLTaypINSyom0h5vcw2HsF1m0eZtWsetJllPtQOfCPM9UrdKYw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prettyPhoto/3.1.6/js/jquery.prettyPhoto.min.js" integrity="sha512-IB7NSySDRedVEsYsOVuzN5O5jwRjV2ewVVmkDFIgE0yNu11GreBCOMv07i7hlQck41T+sTXSL05/cG+De4cZDw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script>
+        $(window).load(function() {
+            $('#carousel').flexslider({
+                animation: "slide",
+                controlNav: true,
+                animationLoop: true,
+                slideshow: true,
+                itemWidth: 342,
+                itemMargin: 5,
+                asNavFor: '#slider',
+                pausePlay: true
+            });
+        });
+
+    </script>
+    <script>
+        $(window).load(function() {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                slideshow: true,
+                slideshowSpeed: 3000,
+
+            });
+        });
+    </script>
+
+
+   <!--MY CURRENT CLASS-->
+    <script>
+        //CURRENT CLASS
+        $(document).ready(function() {
+            $(window).scroll(function() {
+
+                var y = $(this).scrollTop();
+
+                $('nav a').each(function(event) {
+                    if (y >= $($(this).attr('href')).offset().top - 90) {
+                        $('nav a').not(this).removeClass('current');
+                        $(this).addClass('current');
+                    }
+                });
+
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="css/portfolio-styles.css">
+
+</head>
+
+<body>
+
+    <!-- MAIN NAVIGATION -->
+    <nav id="nav" class="sticky">
+        <ul class="sf-menu" id="menu">
+            <li><a href="#topHeader" class="current">Home</a></li>
+            <li><a href="#AboutMe">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN HEADER -->
+    <header class="hero" id="topHeader">
+        <!-- INTRO -->
+        <section id="intro">
+            <div class="row space gap20">
+                <div class="col12">
+                    <h1>Jobanjeet kaur
+                        <br>
+                        <span>Front-End</span>
+                        <br>
+                        <span>Web Developer</span>
+                    </h1>
+                </div>
+
+                <div class="col16">
+                    <img src="images/AvatarMaker.png" alt="avatar" class="responsive shadowed">
+                </div>
+            </div>
+        </section>
+    </header>
+
+
+    <!-- CO-->
+    <main id="container">
+        <div class="row">
+            <section class="col33 arrow">
+                <p><a href="#AboutMe"><i class="fa-solid fa-angle-down"></i></a></p>
+            </section>
+        </div>
+
+        <!-- ABOUT ME -->
+        <section id="AboutMe">
+            <h2>About Me 🌸</h2>
+            <p>Hello World&#33; I am Jobanjeet kaur, a Front-End Web Developer based out of Toronto. I graduated from <a href="https://www.lambtoncollege.ca/" target="_blank">Lambton College</a> and completed Mobile Application Design and Development diploma for two years. And from <a href="https://www.sheridancollege.ca/" target="_blank">Sheridan College</a> as a Front-End Web Developer. I’m now looking for a junior developer position to finally kick start my career and learn among professionals.</p>
+            <p>Other than coding, I love to go out for evening walks on trails and in the park. Also, I like to do painting and play badminton during my free time.</p>
+        </section>
+
+
+
+        <!-- SKILLS -->
+        <section id="skills">
+            <h2>Skills 💻</h2>
+            <div class="row space gap20">
+                <section class="col16">
+                    <img src="images/html5.png" alt="html" class="responsive">
+                </section>
+                <section class="col16">
+                    <img src="images/css-3.png" alt="css" class="responsive zoom">
+                </section>
+                <section class="col16">
+                    <img src="images/java-script.png" alt="javaScript" class="responsive">
+                </section>
+                <section class="col16">
+                    <img src="images/github.png" alt="gitHub" class="responsive">
+                </section>
+            </div>
+
+            <div class="row">
+                <section class="col16">
+                    <img src="images/jQuery.png" alt="jQuery" class="responsive">
+                </section>
+                <section class="col16">
+                    <img src="images/bootstrap.png" alt="bootStrap" class="responsive">
+                </section>
+                <section class="col16">
+                    <img src="images/responsive.png" alt="responsive" class="responsive">
+                </section>
+                <section class="col16">
+                    <img src="images/accessibility.png" alt="accessibility" class="responsive">
+                </section>
+            </div>
+        </section>
+
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2>Projects 📂</h2>
+
+            <!-- PROJECT ONE -->
+            <div class="row gap20 space projectSpace">
+                <section id="project1" class="col12">
+                    <img src="images/project1.png" alt="restaurant" class="responsive shadowed opacity">
+                  
+                    <div class="madeWith1 hidden">
+                        <h4>Made With</h4>
+                        <ul class="imgList">
+                            <li><img src="images/madeWith/html.png" alt="html"></li>
+                            <li><img src="images/madeWith/css.png" alt="css"></li>
+                            <li><img src="images/madeWith/javaScript.png" alt="javaScript"></li>
+                            <li><img src="images/madeWith/github.png" alt="github"></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="col12 paraLeft">
+                    <h3>Restaurant Site</h3>
+                    <p class="para1">Built five pages website using HTML, CSS, jQuery and JavaScript. Made responsive for mobile and browser using the media queries. Added flexbox, responsive layouts and grids.</p>
+                    <div class="projectLinks">
+                        <a href="https://jobanjeetkaur.github.io/restaurant/" target="_blank">Live Site</a>
+                        <span>&#124;</span>
+                        <a href="https://github.com/Jobanjeetkaur/restaurant" target="_blank">GitHub</a>
+                        <span>&#124;</span>
+                        <button class="hide">Hide</button>
+                        <span>&#124;</span>
+                        <button class="visible">Show</button>
+                    </div>
+                    
+                </section>
+
+            </div>
+
+
+            <!-- PROJECT TWO -->
+            <div class="row gap20 space  projectSpace">
+                <section class="col12 paraRight">
+                    <h3>Art and Gallery Site</h3>
+                    <p>Built single page website using HTML, CSS, jQuery and JavaScript. Added animations by using jQuery.Made responsive for mobile and browser using the media queries. Added flexbox, responsive layouts and grids.</p>
+                    <div class="projectLinks">
+                        <a href="https://jobanjeetkaur.github.io/artAndGallery/" target="_blank">Live Site</a>
+                        <span>&#124;</span>
+                        <a href="https://github.com/Jobanjeetkaur/artAndGallery" target="_blank">GitHub</a>
+                    </div>
+                </section>
+                <section id="project2" class="col12">
+
+                    <img src="images/project2.png" alt="artGallery" class="responsive shadowed">
+                    <div class="madeWith2 hidden fr">
+                        <h4>Made With</h4>
+                        <ul class="imgList">
+                            <li><img src="images/madeWith/html.png" alt="html"></li>
+                            <li><img src="images/madeWith/css.png" alt="css"></li>
+                            <li><img src="images/madeWith/javaScript.png" alt="javaScript"></li>
+                            <li><img src="images/madeWith/github.png" alt="github"></li>
+                        </ul>
+
+
+                    </div>
+                </section>
+            </div>
+
+            <!-- PROJECT THREE -->
+            <div class="row space gap20 projectSpace">
+                <section id="project3" class="col12">
+                    <img src="images/project3.png" alt="beauty" class="responsive shadowed">
+                    <div class="madeWith3 hidden">
+                        <h4>Made With</h4>
+                        <ul class="imgList">
+                            <li><img src="images/madeWith/html.png" alt="html"></li>
+                            <li><img src="images/madeWith/css.png" alt="css"></li>
+                            <li><img src="images/madeWith/javaScript.png" alt="javaScript"></li>
+                            <li><img src="images/madeWith/github.png" alt="github"></li>
+                        </ul>
+
+
+                    </div>
+                </section>
+                <section class="col12 paraLeft">
+                    <h3>Beauty Site</h3>
+                    <p>Unique beauty is a 4 page website made by using HTML, CSS, jQuery and JavaScript. Made responsive for mobile and browser using the media queries. Added flexbox, responsive layouts and grids.</p>
+                    <div class="projectLinks">
+                        <a href="https://jobanjeetkaur.github.io/beauty/" target="_blank">Live Site</a>
+                        <span>&#124;</span>
+                        <a href="https://github.com/Jobanjeetkaur/beauty" target="_blank">GitHub</a>
+                    </div>
+                </section>
+            </div>
+
+            <!-- PROJECT FOUR -->
+            <div class="row space gap20 projectSpace">
+                <section class="col12 paraRight">
+                    <h3>Fashion Site</h3>
+                    <p>fashion website was made using HTML, CSS also made it responsive for mobile and browser using the media queries. Added services section, packages for the clients about the salon, added responsive videos forms and maps.</p>
+                    <div class="projectLinks">
+                        <a href="https://jobanjeetkaur.github.io/fashion/" target="_blank">Live Site</a>
+                        <span>&#124;</span>
+
+                        <a href="https://github.com/Jobanjeetkaur/fashion" target="_blank">GitHub</a>
+                    </div>
+                </section>
+                <section id="project4" class="col12">
+                    <img src="images/project4.png" alt="" class="responsive shadowed">
+                    <div class="madeWith4 hidden fr">
+                        <h4>Made With</h4>
+                        <ul class="imgList">
+                            <li><img src="images/madeWith/html.png" alt="html"></li>
+                            <li><img src="images/madeWith/css.png" alt="css"></li>
+                            <li><img src="images/madeWith/javaScript.png" alt="javaScript"></li>
+                            <li><img src="images/madeWith/github.png" alt="github"></li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+
+
+        <!-- FILER GALLERY-->
+
+
+        <section class="filter">
+            <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('all')">Show all</button>
+                <button class="btn" onclick="filterSelection('web1')">Code Web 1</button>
+                <button class="btn" onclick="filterSelection('web2')">Code Web 2</button>
+                <button class="btn" onclick="filterSelection('jquery')">jQuery and JavaScript</button>
+            </div>
+
+            <!-- Portfolio Gallery Grid -->
+            <div class="row">
+                <section class="col33">
+                    <div class="column web1">
+                        <div class="content">
+                            <img src="images/filter/filter1.png" alt="movies" class="responsive">
+                            <h4>Movies Website</h4>
+                            <p>single page site..</p>
+                        </div>
+                    </div>
+                    <div class="column web1">
+                        <div class="content">
+                            <img src="images/filter/filter2.png" alt="flowers" class="responsive">
+                            <h4>Flowers website</h4>
+                            <p>four page website..</p>
+                        </div>
+                    </div>
+                    <div class="column web2">
+                        <div class="content">
+                            <img src="images/filter/filter3.png" alt="beauty" class="responsive">
+                            <h4>Beauty</h4>
+                            <p>responsive pages..</p>
+                        </div>
+                    </div>
+                    <div class="column web2">
+                        <div class="content">
+                            <img src="images/filter/filter4.png" alt="fashion" class="responsive">
+                            <h4>Fashion Site</h4>
+                            <p>mobile responsive..</p>
+                        </div>
+                    </div>
+
+                    <div class="column jquery">
+                        <div class="content">
+                            <img src="images/filter/filter5.png" alt="gallery" class="responsive">
+                            <h4>Gallery</h4>
+                            <p>Added jQuery effects..</p>
+                        </div>
+                    </div>
+                    <div class="column jquery">
+                        <div class="content">
+                            <img src="images/filter/filter6.png" alt="" class="responsive">
+                            <h4>restaurant</h4>
+                            <p>Four pages site..</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+
+
+        <!-- PRETTY PHOTO  -->
+
+        <div id="prettyPhoto">
+            <h5>click on any project to learn more</h5>
+            <section class="centered">
+                <a href="images/large/lg-isotope-print-01.png" rel="prettyPhoto[print]" title="You can buy this at amazon">
+                    <img src="images/thumb/th-isotope-print-01.png" alt="project1">
+                </a>
+                <a href="images/large/lg-isotope-print-02.png" rel="prettyPhoto[print]" title="You can buy this at zellers">
+                    <img src="images/thumb/th-isotope-print-02.png" alt="beauty site">
+                </a>
+                <a href="images/large/lg-isotope-print-03.png" rel="prettyPhoto[print]" title="You can buy this at amazon">
+                    <img src="images/thumb/th-isotope-print-03.png" alt="restaurant site">
+                </a>
+            </section>
+        </div>
+
+
+
+        <!-- FLeXSLIDER ACCORDIAN -->
+        <section id="accFlex">
+            <h2>Details</h2>
+            <div class="row gap20 space">
+                <div id="accordion" class="col12">
+                    <h3>Code Web 1</h3>
+                    <div>
+                        <p>
+                            Create basic HTML and CSS pages
+                            Optimize websites using advanced layout and typography techniques
+                            Create fixed, fluid, and responsive websites
+                            Use jQuery to build, manipulate, edit, and add content to a website
+                        </p>
+                    </div>
+                    <h3>Code Web 2</h3>
+                    <div>
+                        <p>
+                            Create properly structured HTML pages based on mockups and standard practices
+                            Explain the purpose of the five position properties of CSS layouts (static, relative, absolute, fixed, and inherit).Create standards-compliant, table-free CSS layouts.Use floats and positioning to layout pages effectively
+                            Use advanced CSS to enhance page design and achieve consistency,Add forms to a web page,Add Video and Audio to web sites.Use typography techniques to optimize web page layout.Create fixed, fluid and responsive layouts
+                        </p>
+                    </div>
+                    <h3>jQuery and JavaScript</h3>
+                    <div>
+                        <p>
+                            learn how to add animations and effects, dynamic page formatting, and other advanced features to websites using jQuery and Javascript. Gain experience using Javascript syntax and learn jQuery to build, manipulate, edit, and add content to web pages.
+                        </p>
+                        <ul>
+                            <li>List item one</li>
+                            <li>List item two</li>
+                            <li>List item three</li>
+                        </ul>
+                    </div>
+                    <h3>Content Management Systems</h3>
+                    <div>
+                        <p>
+
+                            Knowing how to access and manipulate content is critical to success. Get a comprehensive introduction of CMS and how best to leverage it.
+                        </p>
+                        <p> Learn about content storage, content discovery and content editing. Understanding how content is used will benefit collaboration, control of data, and will improve communication between users.
+                        </p>
+                    </div>
+                </div>
+
+
+
+<section class="col12">
+    <div class="flexslider carousel">
+        <ul class="slides">
+            <li><img src="images/large/lg-isotope-print-01.png" alt="project1">
+            </li>
+            <li>
+                <img src="images/large/lg-isotope-print-02.png" alt="project2">
+            </li>
+            <li>
+                <img src="images/large/lg-isotope-print-03.png" alt="project3">
+            </li>
+        </ul>
+    </div>
+</section>
+
+            </div>
+        </section>
+
+
+        <!-- CAROUSEL -->
+        <section id="slides">
+            <h2>Slides</h2>
+            <div id="carousel" class="flexslider">
+                <ul class="slides">
+                    <li><img src="images/filter/filter1.png" alt="carousel1"></li>
+                    <li><img src="images/filter/filter2.png" alt="carousel2"></li>
+                    <li><img src="images/filter/filter3.png" alt="carousel3"></li>
+                    <li><img src="images/filter/filter4.png" alt="carousel4"/></li>
+                    <li><img src="images/filter/filter5.png" alt="carousel5"/></li>
+                    <li><img src="images/filter/filter6.png" alt="carousel6"/></li>
+                </ul>
+            </div>
+        </section>
+
+
+
+       <!-- MASONRY -->
+       
+        <h2>Projects Gallery</h2>
+        <div id="freeWall" class="free-wall">
+            <div class="tiles tiles-width-2">
+                <img src="images/project1.png" alt="project1"/>
+            </div>
+            <div class="tiles">
+                <img src="images/project2.png" alt="project2"/>
+            </div>
+            <div class="tiles">
+                <img src="images/project3.png" alt="project3"/>
+            </div>
+            <div class="tiles">
+                <img src="images/project4.png" alt="project4"/>
+            </div>
+            <div class="tiles">
+                <img src="images/project6.png" alt="project6"/>
+            </div>
+            <div class="tiles tiles-width-2 ">
+                <img src="images/project5.png" alt="project5"/>
+            </div>
+            <div class="tiles">
+                <img src="images/project7.png" alt="project7"/>
+            </div>
+            <div class="tiles tiles-width-2">
+                <img src="images/project4.png" alt="project4"/>
+            </div>
+            <div class="tiles">
+                <img src="images/project1.png" alt="project1"/>
+            </div>
+
+        </div>
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="row space gap20">
+                <section class="col12 envelope">
+                    <h2>Let&#39;s Connect<i class="fa-solid fa-envelope"></i></h2>
+                    <p>If you would like to know more about me or any of my projects, feel free to send me comments or questions using the contact form! You may also email me directly or schedule a chat via any of the links below.</p>
+                </section>
+
+
+                <section class="col12">
+                    <form action="form.php" method="post" enctype="multipart/form-data" id="form">
+
+                        <input name="name" required="required" placeholder="Your Name">
+
+                        <input name="email" type="email" required="required" placeholder="Your Email">
+
+                        <textarea name="message" cols="20" rows="5" required="required" placeholder="Message"></textarea>
+
+                        <input class="button" id="submit" name="submit" type="submit" value="Submit">
+
+                    </form>
+                </section>
+            </div>
+        </section>
+        <a id="button"></a>
+        
+    </main>
+
+    <!--  FOOTER -->
+    <footer id="footer">
+        <!--  SOCIAL ICONS-->
+        <div class="social-icons shadow">
+            <a href="#"><i class="fab fa-facebook-f circle"></i> <span class="position">Facebook</span></a>
+            <a href="#"><i class="fab fa-twitter circle"></i> <span class="position">Twitter</span></a>
+            <a href="#"><i class="fab fa-google-plus-g circle"></i> <span class="position">Google+</span>
+            </a> <a href="https://www.linkedin.com/in/jobanjeetkaur/" target="_blank"> <i class="fab fa-linkedin-in circle"></i> <span class="position">LinkedIn</span></a>
+        </div>
+        <p>&copy;2030 All Rights Reserved. </p>
+    </footer>
+
+    <script src="mainScript.js"></script>
+</body>
+
+</html>
